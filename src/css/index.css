@@ -68,3 +68,17 @@ main article {
 main article section {
   padding: 1rem;
 }
+
+@media (max-width: 1128px) {
+  main article {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "about"
+      "education"
+      "contacts"
+      "skills";
+  }
+}
