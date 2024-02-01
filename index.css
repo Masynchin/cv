@@ -1,0 +1,70 @@
+/* Текстовые элементы */
+
+* {
+  font-family: "Mulish", sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p,
+li {
+  font-size: 24px;
+}
+
+a {
+  font-weight: 500;
+  text-underline-offset: 2px;
+}
+
+/* Контейнеризация (не Докер) */
+body {
+  padding: 2rem 5rem;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  column-gap: 2em;
+  row-gap: 2em;
+}
+
+main article section.contacts {
+  grid-area: contacts;
+}
+
+main article section.skills {
+  grid-area: skills;
+}
+
+main article section.about {
+  grid-area: about;
+}
+
+main article section.education {
+  grid-area: education;
+}
+
+main article {
+  border-top: 2px solid rgb(208, 208, 208);
+  display: grid;
+  row-gap: 1rem;
+  grid-template-columns: 480px 1fr;
+  grid-template-areas:
+    "contacts about"
+    "skills education";
+}
+
+main article section {
+  padding: 1rem;
+}
